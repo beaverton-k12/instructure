@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calendar</title>
+    <link rel="shortcut icon" href="https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico">
+    <style>
+      @import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap);
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0
+        }
+
+        100% {
+          opacity: 1
+        }
+      }
+
+      @-moz-keyframes fadeIn {
+        0% {
+          opacity: 0
+        }
+
+        100% {
+          opacity: 1
+        }
+      }
+
+      @-webkit-keyframes fadeIn {
+        0% {
+          opacity: 0
+        }
+
+        100% {
+          opacity: 1
+        }
+      }
+
+      @-o-keyframes fadeIn {
+        0% {
+          opacity: 0
+        }
+
+        100% {
+          opacity: 1
+        }
+      }
+
+      @-ms-keyframes fadeIn {
+        0% {
+          opacity: 0
+        }
+
+        100% {
+          opacity: 1
+        }
+      }
+
+      body {
+        background-color: #fff;
+        font-family: Roboto, sans-serif !important;
+        margin: 0;
+        -webkit-animation: fadeIn 1s;
+        -moz-animation: fadeIn 1s;
+        -o-animation: fadeIn 1s;
+        -ms-animation: fadeIn 1s
+      }
+
+      input {
+        background-color: #402d54;
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        transition: .3s ease-in-out;
+        color: #fff;
+        outline: 0
+      }
+
+      input:hover {
+        background-color: #391d57
+      }
+
+      button {
+        padding: 10px;
+        background-color: #402d54;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        transition: .2s ease-in-out;
+        margin-left: 4px
+      }
+
+      button:hover {
+        background-color: #391d57;
+        color: #e3e3e3
+      }
+
+      .frame {
+        display: none;
+        width: 100px;
+        height: 100px;
+        transition: .7s ease-in-out;
+        margin-left: 5px;
+        margin-right: 5px
+      }
+
+      .frame a {
+        text-decoration: none;
+        color: #000
+      }
+
+      .frame img {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover
+      }
+
+      .frame:hover {
+        width: 140px
+      }
+
+      .logo {
+        display: none;
+        font-size: 60px;
+        margin-top: 50px;
+        font-family: Quicksand, sans-serif;
+        background: -webkit-linear-gradient(129deg, rgba(180, 58, 58, 1) 0, rgba(253, 229, 29, 1) 25%, rgba(51, 253, 33, 1) 50%, rgba(143, 145, 161, 1) 75%, rgba(235, 69, 252, 1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+        transition: .4s ease-in-out;
+        cursor: default
+      }
+
+      .logo:hover {
+        font-size: 65px
+      }
+
+      iframe {
+        height: 640px;
+        width: 1080px;
+        display: none
+      }
+
+      h1,
+      h2 {
+        color: #e3e3e3;
+        transition: .4s ease-in-out;
+        font-family: Quicksand, sans-serif
+      }
+
+      #heading1:hover,
+      #heading2:hover {
+        font-size: 25px
+      }
+    </style>
+  </head>
+  <body style="background-color:#1a0b29!important;font-family:'Google Sans'">
+    <center>
+      <p class="logo" id="logo">Welcome to instructure</p>
+      <h1 id="title" style="margin-top:100px">Welcome</h1>
+      <h2 id="subtitle">Enter the password to continue</h2>
+      <input title="Password is supersecure" type="password" id="input">
+      <button id="button" onclick="myFunction()">
+        <b>Enter</b>
+      </button>
+      <h2 id="heading1" style="display:none">Heading1</h2>
+      <div class="frame" id="frame">
+        <a href="css/font1/docs/index.html">
+          <img onclick="object1()" src="https://github.com/butterdogco/stuff/blob/main/iframes/css/font1/docs/1.png?raw=true">
+        </a>
+      </div>
+      <div class="frame" id="frame2">
+        <a href="css/home/index.html">
+          <img onclick="object2()" src="https://github.com/butterdogco/stuff/blob/main/iframes/css/font1/docs/2.jpg?raw=true">
+        </a>
+      </div>
+      <div class="frame" id="frame3">
+        <a href="css/font2/index.html">
+          <img src="https://www.w3technic.com/wp-content/uploads/2022/03/feature-image-15-950x500.png">
+        </a>
+      </div>
+      <div class="frame" id="frame4">
+        <a href="css/font3/index.html">
+          <img src="css/font3/3.png">
+        </a>
+      </div>
+      <div class="frame" id="frame5">
+        <a href="css/font4/index.html">
+          <img src="css/font4/4.jpeg">
+        </a>
+      </div>
+      <h2 id="heading2" style="display:none">Heading2</h2>
+        <div class="frame" id="frame6">
+          <a href="css/style/home.html">
+            <img src="https://github.com/butterdogco/stuff/blob/main/images/1.png?raw=true">
+          </a>
+      </div>
+      <br>
+    </center>
+    <script>
+      function myFunction() {
+        "supersecure" === document.querySelector("input").value ? (document.getElementById("title").style.display = "none", document.getElementById("subtitle").style.display = "none", document.getElementById("input").style.display = "none", document.getElementById("button").style.display = "none", document.getElementById("frame").style.display = "inline-block", document.getElementById("frame2").style.display = "inline-block", document.getElementById("frame3").style.display = "inline-block", document.getElementById("frame4").style.display = "inline-block", document.getElementById("frame5").style.display = "inline-block", document.getElementById("logo").style.display = "block", document.getElementById("heading1").innerHTML = "Games", document.getElementById("heading1").style.display = "block", document.getElementById("heading2").style.display = "block", document.getElementById("heading2").innerHTML = "Unblocked Sites", document.getElementById("frame6").style.display = "block") : (alert("Incorrect, initiating self destruct."), document.body.style.display = "none")
+      }
+    </script>
+  </body>
+</html>
